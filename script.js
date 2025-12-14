@@ -249,6 +249,7 @@ async function continueSession(message) {
 }
 
 // Start streaming response using SSE
+// 修改 startStreamingResponse 函数
 async function startStreamingResponse() {
     return new Promise((resolve, reject) => {
         if (!currentSession.sessionId || !currentSession.key) {
@@ -278,7 +279,7 @@ async function startStreamingResponse() {
         chatMessages.appendChild(aiMessageDiv);
         scrollToBottom();
         
-        // 创建EventSource连接
+        // 创建EventSource连接（使用GET请求）
         currentSession.isStreaming = true;
         currentSession.eventSource = new EventSource(
             `${ENDPOINTS.streamSession}?session_id=${currentSession.sessionId}&key=${currentSession.key}`
