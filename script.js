@@ -1,5 +1,5 @@
 // API Configuration
-const API_BASE_URL = 'https://1.s.csec.top:10082/api';
+const API_BASE_URL = 'https://1.s.csec.top:10057/api';
 const ENDPOINTS = {
     listModels: `${API_BASE_URL}/list-models`,
     startSession: `${API_BASE_URL}/start-session`,
