@@ -373,7 +373,7 @@ async function startStreamingResponse() {
                 
                 resolve();
             }
-        }, 30000); // 30秒超时
+        }, 60000*60); 
     });
 }
 
