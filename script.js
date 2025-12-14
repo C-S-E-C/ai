@@ -220,6 +220,10 @@ async function startNewSession(message) {
     }
 }
 
+function DeleteHistory() {
+    localStorage.removeItem("chatSession");
+    location.reload();
+}
 // Continue existing session
 async function continueSession(message) {
     try {
