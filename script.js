@@ -52,8 +52,8 @@ async function loadModels() {
 
         const data = await response.json();
         
-        if (data && Array.isArray(data.models)) {
-            populateModelSelect(data.models);
+        if (data && Array.isArray(data)) {
+            populateModelSelect(data);
             statusText.textContent = 'Select a model to begin';
         } else {
             throw new Error('Invalid response format');
