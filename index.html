@@ -1,44 +1,80 @@
-<style>
-    body{
-        background-color: #000000;
-        font-family: sans-serif;
-        color: #ffffff;
-    }
-    #ai {
-        /* left:50%; */
-        justify-self: center;
-        width: 500px;
-        height: 500px;
-        border: 15px solid #ffffff;
-        border-radius: 10px;
-        background-color: #000000;
-        color: #ffffff;
-        position: relative; /* 允许子元素绝对定位 */
-        text-align: center; /* 文本居中 */
-        font-family: sans-serif;
-    }
-    #ai h1:first-child {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        font-size: 50px;
-        margin: 0;
-    }
-    #ai h1:nth-child(2) {
-        font-size: 300px;
-        line-height: 1.4; /* 避免过大行高影响布局 */
-        margin: 0;
-    }
-    #ai h1:last-child {
-        font-size: 45px;
-        /* color: #555; */
-        margin: 0;
-    }
-</style>
-<h1 style="text-align: center;font-size: 150px;line-height: 100px;">CSEC AI</h1>
-<h1 style="text-align: center;font-size: 75px;line-height: 50px;">COMMING SOON</h1>
-<div id="ai">
-    <h1>13</h1>
-    <h1>AI</h1>
-    <h1>aluminium</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat AI - Intelligent Conversations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Chat AI
+                </h1>
+                <div class="model-selector-wrapper">
+                    <label for="model-select">Model:</label>
+                    <select id="model-select" class="model-select">
+                        <option value="">Loading models...</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <main class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="welcome-message">
+                    <div class="welcome-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h2>Welcome to Chat AI</h2>
+                    <p>Select a model and start a conversation. Your AI assistant is ready to help!</p>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading-indicator" class="loading-indicator hidden">
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="message-input" 
+                    class="message-input" 
+                    placeholder="Type your message here..."
+                    rows="1"
+                ></textarea>
+                <button id="send-button" class="send-button" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span class="status-text" id="status-text">Select a model to begin</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
