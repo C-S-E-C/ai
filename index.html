@@ -1,45 +1,51 @@
-<style>
-    body{
-        background-color: #000000;
-        font-family: sans-serif;
-        color: #ffffff;
-    }
-    #ai {
-        /* left:50%; */
-        justify-self: center;
-        width: 500px;
-        height: 500px;
-        border: 15px solid #ffffff;
-        border-radius: 10px;
-        background-color: #000000;
-        color: #ffffff;
-        position: relative; /* 允许子元素绝对定位 */
-        text-align: center; /* 文本居中 */
-        font-family: sans-serif;
-    }
-    #ai h1:first-child {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        font-size: 50px;
-        margin: 0;
-    }
-    #ai h1:nth-child(2) {
-        font-size: 300px;
-        line-height: 1.4; /* 避免过大行高影响布局 */
-        margin: 0;
-    }
-    #ai h1:last-child {
-        font-size: 45px;
-        /* color: #555; */
-        margin: 0;
-    }
-</style>
-<h1 style="text-align: center;font-size: 150px;line-height: 100px;">CSEC AI</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Syntropica AI</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #212327;
+            }
 
-<div id="ai">
-    <h1>13</h1>
-    <h1>AI</h1>
-    <h1>aluminium</h1>
-</div>
-<h1 style="text-align: center;font-size: 75px;line-height: 50px;">COMMING SOON</h1>
+            #sidebar-wrapper {
+                position: absolute;
+                top: 0.25%;
+                left: 0.25%;
+                width: 19.5%;
+                height: 99.5%;
+                background-color: #43454a;
+                border-radius: 15px;
+            }
+            #chat {
+                position: absolute;
+                top: 0.25%;
+                left: 20%;
+                width: 79.75%;
+                height: 99.5%;
+                background-color: #43454a;
+                border-radius: 15px;
+            }
+            #logo {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                position: relative;
+                top: 0;
+                height: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="sidebar-wrapper">
+            <div id="logo">
+                <img src="//assets.r2.csec.top/logo/white.blank.svg" />
+                <h1>Syntropica</h1>
+            </div>
+            <ul id="sidebar"></ul>
+        </div>
+        <div id="chat"></div>
+    </body>
+</html>
